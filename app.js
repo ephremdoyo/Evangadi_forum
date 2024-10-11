@@ -22,7 +22,13 @@ app.use("/api/user", userRoutes);
 app.use("/api/question", questionsRoute);
 
 // answer routes middleware
+
 app.use("/api/answer", answerRoute);
+
+
+app.get("/", (req, res) => {
+  res.send("welcome");
+});
 
 async function start() {
   try {
