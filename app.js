@@ -16,14 +16,14 @@ const dbConnection = require("./db/dbConfig");
 app.use(express.json());
 
 // user routes middleware
-app.use("/api/user", userRoutes);
+app.use("/user", userRoutes);
 
 // question routes middleware
-app.use("/api/question", questionsRoute);
+app.use("/question", questionsRoute);
 
 // answer routes middleware
 
-app.use("/api/answer", answerRoute);
+app.use("/answer", answerRoute);
 
 
 
