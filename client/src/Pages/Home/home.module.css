@@ -1,0 +1,74 @@
+.home_page_container {
+  background-color: #fafafa;
+  width: 100%;
+}
+.inner_home_container {
+  width: 64%;
+  margin: auto;
+  padding: 35px 10px;
+}
+.inner_home_container a {
+  text-decoration: none;
+  color: black;
+}
+.ask_question_link {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+}
+.ask_question_btn {
+  padding: 10px;
+  background-color: #0d6efd;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+.ask_question_link p,
+.username_title_container div,
+.username_title_container p {
+  font-family: "Coming Soon", cursive;
+  font-size: 20px;
+  line-height: 2;
+}
+.username_title_container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  padding-bottom: 20px;
+}
+.inner_home_container input {
+  margin: 10px;
+  width: 95%;
+  padding: 12px;
+  margin-bottom: 30px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.inner_home_container .username_title_container {
+  border-top: 2px solid #ccc;
+  padding-top: 20px;
+}
+
+.username_title_container .username_container {
+  padding-right: 25px;
+}
+.username_title_container .title_container , .username_title_container .right_angle_container{
+  width: 15%;
+}
+.username_title_container .title_container {
+  width: 600px;
+  padding-top: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.username_container p {
+  line-height: 1;
+  width: 130px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: normal;
+}
+
