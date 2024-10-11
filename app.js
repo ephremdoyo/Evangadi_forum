@@ -26,9 +26,11 @@ app.use("/api/question", questionsRoute);
 app.use("/api/answer", answerRoute);
 
 
+
 app.get("/", (req, res) => {
   res.send("welcome");
 });
+
 
 async function start() {
   try {
