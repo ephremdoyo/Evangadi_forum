@@ -1,0 +1,13 @@
+.how_it_works {
+  width: 50%;
+  margin: 40px auto;
+  /* margin: auto; */
+  line-height: 2;
+}
+.how_it_works h2 {
+  padding-bottom: 20px;
+}
+.how_it_works p {
+  padding-left: 30px;
+  padding-bottom: 20px;
+}
