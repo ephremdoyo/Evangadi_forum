@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import classes from "../../pages/Landing/landing.module.css";
+import classes from "../../Pages/Landing/landing.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { BiHide, BiShow } from "react-icons/bi";
 import { ClipLoader } from "react-spinners";
