@@ -1,11 +1,11 @@
 import React from "react";
 import SharedOutlet from "./components/LayOut/LayOut";
-import Home from "./pages/Home/Home";
-import Landing from "./pages/Landing/Landing";
-import Question from "./pages/Question/Question";
+import Home from "./Pages/Home/Home";
+import Landing from "./Pages/Landing/Landing";
+import Question from "./Pages/Question/Question";
 import { Route, Routes } from "react-router-dom";
-import Answer from "./pages/Answer/Answer";
-import HowItWorks from "./pages/HowItWorks/HowItWorks";
+import Answer from "./Pages/Answer/Answer";
+import HowItWorks from "./Pages/HowItWorks/HowItWorks";
 
 const Routing = () => {
   return (
