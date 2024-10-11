@@ -1,0 +1,44 @@
+.outer_about_wrapper {
+  padding: 45px 0;
+  margin-left: 20px;
+}
+.about_container {
+  width: 564px;
+  margin: auto;
+  margin-top: 39px;
+  padding: 50px 20px 92px 20px;
+  align-items: center;
+}
+.about_container h1 {
+  margin-bottom: -10px;
+  font-size: 40px;
+}
+.about_container p,
+.about_container h1 {
+  color: #374373;
+  padding: 15px;
+}
+.about p {
+  color: #fe8302;
+  margin-bottom: -30px;
+}
+.paragraph_container p {
+  font-size: 15px;
+  line-height: 2;
+}
+.about_btn {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-top: 15px;
+  width: 230px;
+  height: 35px;
+  color: #fff;
+  background-color: #fe8302;
+  border: none;
+  border-radius: 3px;
+}
+@media (max-width: 768px) {
+  .outer_about_wrapper {
+    display: none;
+  }
+}
