@@ -28,7 +28,6 @@ const Answer = () => {
       });
 
       setSingleQuestion(data.question[0]);
-      console.log(data.question[0]);
     } catch (error) {
       console.log(error);
     }
@@ -40,7 +39,6 @@ const Answer = () => {
         headers: { Authorization: "Bearer " + token },
       });
       setAnswer(data);
-      console.log(data);
     } catch (error) {
       console.log(error);
       console.log(error.response.data);

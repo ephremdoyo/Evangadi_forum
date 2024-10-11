@@ -8,6 +8,7 @@ import axios from "../../API/axios";
 
 const SignUp = ({ switchToLogin }) => {
   const [errorMessage, setErrorMessage] = useState("");
+  const [isUserExist, setisUserExist] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [Loader, setLoader] = useState(false);
   const navigate = useNavigate();
@@ -79,9 +80,10 @@ const SignUp = ({ switchToLogin }) => {
         "Error during registration",
         error.response ? error.response.data : error.message
       );
+      setisUserExist(error.response.data.message);
       setLoader(false);
     }
-    window.location.reload();
+    // window.location.reload();
   }
   return (
     <>
@@ -147,13 +149,10 @@ const SignUp = ({ switchToLogin }) => {
               {showPassword ? <BiShow size={25} /> : <BiHide size={25} />}
             </button>
           </div>
-          {errorMessage && (
-            <p
-              style={{ color: "red", marginBottom: "-15px", marginTop: "-7px" }}
-            >
-              {errorMessage}
-            </p>
-          )}
+
+
+          {isUserExist && <p style={{ color: "red",marginBottom:"-15px" }}>{isUserExist}</p>}
+
           <div className={classes.privacy_policy}>
             I argree to the
             <a href="https://www.evangadi.com/legal/privacy/" target="_blank">

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import About from "../../conponents/About/About";
-import Login from "../../conponents/Login/Login";
-import SignUp from "../../conponents/SignUp/SignUp";
+import About from "../../components/About/About";
+import Login from "../../components/Login/Login";
+import SignUp from "../../components/SignUp/SignUp";
 import classes from "./landing.module.css";
 
 const Landing = () => {
