@@ -1,0 +1,143 @@
+.outer_landing_page {
+  background-image: url("../../assets//bg-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing_page_container {
+  display: flex;
+  justify-content: space-between;
+  width: 80.2%;
+  margin: auto;
+}
+
+.outer_signUp_container {
+  padding: 40px 0;
+}
+.signUp_container {
+  background-color: #fff;
+  width: 564px;
+  height: 395px;
+  margin-top: 39px;
+  padding: 30px 0px 92px 40px;
+  align-items: center;
+  border: none;
+  border-radius: 15px;
+  -moz-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0px 10px -2px rgba(0, 0, 0, 0.4);
+}
+
+.signUp_title {
+  text-align: center;
+  align-items: center;
+}
+.signUp_container h3 {
+  font-weight: 700;
+  padding: 10px 30px;
+  color: #253358;
+}
+.signUp_container p {
+  padding: 10px;
+}
+.signUp_container a {
+  cursor: pointer;
+  color: #fe8302;
+}
+.signUp_container input {
+  border: 2px solid #ccc;
+  outline: none;
+  border-radius: 4px;
+  margin: 7px 0;
+  padding: 12px;
+}
+
+.email_password {
+  width: 88%;
+  margin: auto;
+}
+.fl_name input {
+  width: 40.5%;
+  margin-right: 10px;
+}
+
+.signUp_container input:focus {
+  border-bottom-color: #fe8302;
+}
+.password_field {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  width: 92%;
+}
+.password_field input {
+  border: none;
+}
+.password_field .password_input {
+  margin: 0;
+  width: 90%;
+}
+.password_field .toggle_password {
+  background-color: transparent;
+  border: none;
+  margin-right: 20px;
+}
+.password_field .toggle_password {
+  color: #dadada;
+}
+.password_field .toggle_password:hover {
+  cursor: pointer;
+  color: #fe8302;
+}
+.signUp_container .submit_btn {
+  color: White;
+  background-color: #516cf0;
+  border: none;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  width: 93%;
+  margin: auto;
+}
+.forgot_password {
+  text-align: right;
+  width: 92.5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.forgot_password a {
+  text-decoration: none;
+  font-weight: 500;
+}
+.signUp_container .last_link {
+  text-align: center;
+  margin-top: 15px;
+  margin-left: -50px;
+}
+.privacy_policy {
+  text-align: center;
+  margin: 10px;
+}
+.privacy_policy a {
+  text-decoration: underline;
+  padding: 0 4px;
+}
+
+@media (max-width: 769px) {
+  .landing_page_container {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+}
+@media (min-width: 1550px) {
+  .landing_page_container {
+    display: flex;
+    justify-content: space-between;
+    width: 64.2%;
+    margin: auto;
+  }
+}
