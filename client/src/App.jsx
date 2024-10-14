@@ -2,11 +2,12 @@ import { createContext, useEffect, useState } from "react";
 import Routing from "./Routing";
 import axios from "./API/axios";
 import { useNavigate } from "react-router-dom";
+import Loader from "./components/Loading/Loader/Loader";
 export const AppState = createContext();
 
 function App() {
   const [user, setUser] = useState({});
-  const [loading, setLoading] = useState(true);
+  const [isLoading, setLoading] = useState(true);
   const token = localStorage.getItem("token");
   const navigate = useNavigate();
   async function checkUser() {
@@ -28,8 +29,8 @@ function App() {
     checkUser();
   }, []);
 
-  if (loading) {
-    return <div>Loading...</div>; // Show a loading message or spinner
+  if (isLoading) {
+    return <Loader />; // Show a loading message or spinner
   }
 
   return (
