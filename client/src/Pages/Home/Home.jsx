@@ -11,6 +11,8 @@ const Home = () => {
   const [ErrorQuestion, setErrorQuestion] = useState("");
   const { user } = useContext(AppState);
   const token = localStorage.getItem("token");
+  const [SearchItem, setSearchItem] = useState("");
+  const [filteredQuestions, setFilteredQuestions] = useState(question);
 
   async function getQuestion() {
     try {
@@ -33,6 +35,13 @@ const Home = () => {
     getQuestion();
   }, []);
 
+  useEffect(() => {
+    const filtered = question.filter((question) =>
+      question.title.toLowerCase().includes(SearchItem.toLowerCase())
+    );
+    setFilteredQuestions(filtered);
+  }, [SearchItem, question]);
+
   return (
     <section className={classes.home_page_container}>
       <section className={classes.inner_home_container}>
@@ -45,13 +54,18 @@ const Home = () => {
           </p>
         </div>
         <div className={classes.search_input}>
-          <input type="text" placeholder="Search question" />
+          <input
+            value={SearchItem}
+            onChange={(e) => setSearchItem(e.target.value)}
+            type="text"
+            placeholder="Search question"
+          />
         </div>
 
         {ErrorQuestion ? (
           <h4 style={{ paddingBottom: "30px" }}>No Question yet 😊</h4>
         ) : (
-          question.map((singleQuestion) => {
+          filteredQuestions.map((singleQuestion) => {
             const title = singleQuestion.title;
             const content = singleQuestion.content;
             const username = singleQuestion.user_name;
