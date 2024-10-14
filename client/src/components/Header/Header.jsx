@@ -1,12 +1,19 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import classes from "./header.module.css";
 import Logo from "../../assets/evangadi-logo-black.png";
 import { Link, useNavigate } from "react-router-dom";
 import { RiMenu3Line } from "react-icons/ri";
 import { AppState } from "../../App";
+import { IoMdClose } from "react-icons/io";
 
 const Header = () => {
   const { user } = useContext(AppState);
+
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
   if (!user) {
     return;
   }
@@ -61,9 +68,38 @@ const Header = () => {
             </Link>
           )}
         </div>
-        <div className={classes.header_menu_icon}>
+        <div className={classes.header_menu_icon} onClick={toggleSidebar}>
           <RiMenu3Line size={35} style={{ color: "orange" }} />
         </div>
+
+        {isSidebarOpen && (
+          <div className={classes.header__sidebar}>
+            <span
+              className={classes.header__close_icon}
+              onClick={toggleSidebar}
+            >
+              {/* Close (X) icon */}
+              <IoMdClose />
+            </span>
+            <nav className={classes.header__nav}>
+              <a href="/" onClick={toggleSidebar}>
+                Home
+              </a>
+              <a href="/how-it-works" onClick={toggleSidebar}>
+                How it works
+              </a>
+            </nav>
+            {user.username ? (
+              <button className={classes.button} onClick={handleLogout}>
+                SIGN OUT
+              </button>
+            ) : (
+              <button className={classes.button} onClick={handleLogout}>
+                SIGN IN
+              </button>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );
