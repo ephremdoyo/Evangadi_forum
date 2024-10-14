@@ -47,6 +47,9 @@
     display: block;
     padding: 50px 20px;
   }
+  .footer_logo {
+    margin-top: 30px;
+  }
 }
 @media (min-width: 1200px) {
   .footer_inner_container {

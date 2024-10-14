@@ -50,3 +50,9 @@
 
   background-color: #fafafa;
 }
+@media (max-width: 768px) {
+  .inner_post_question_wrapper {
+    width: 90%;
+    margin: auto;
+  }
+}
