@@ -26,17 +26,16 @@ const Landing = () => {
       ) : (
         <section className={classes.outer_landing_page}>
           <section className={classes.landing_page_container}>
-            <div>
-              <section className={classes.outer_signUp_container}>
-                <section className={classes.signUp_container}>
-                  {activeComponent === "Login" ? (
-                    <Login switchToSignUp={showToSignUp} />
-                  ) : (
-                    <SignUp switchToLogin={showToLogin} />
-                  )}
-                </section>
+            <section className={classes.outer_signUp_container}>
+              <section className={classes.signUp_container}>
+                {activeComponent === "Login" ? (
+                  <Login switchToSignUp={showToSignUp} />
+                ) : (
+                  <SignUp switchToLogin={showToLogin} />
+                )}
               </section>
-            </div>
+            </section>
+
             <div>
               <About />
             </div>
